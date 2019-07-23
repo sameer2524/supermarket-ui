@@ -1,0 +1,7 @@
+.makeItCenter{
+    width: 30%;
+    height:150vh;
+    display:table-cell;
+    align-items: center;
+    justify-content: center;
+}
