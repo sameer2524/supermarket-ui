@@ -5,6 +5,7 @@ import { UserComponent } from './user/user.component';
 import { AdminComponent } from './admin/admin.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { CreateProductComponent } from './admin/create-product/create-product.component';
 
 
 const routes: Routes = [
@@ -32,7 +33,11 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
-}
+},
+{ 
+    path: 'add',
+ component: CreateProductComponent
+},
 ];
 
 @NgModule({

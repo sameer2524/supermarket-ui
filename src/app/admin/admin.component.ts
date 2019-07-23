@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../service/user.service';
+import { AdminService } from '../service/admin.service';
+import { Observable } from 'rxjs';
+import { Product } from './Product';
 
 @Component({
   selector: 'app-admin',
@@ -9,8 +12,9 @@ import { UserService } from '../service/user.service';
 export class AdminComponent implements OnInit {
   board: string;
   errorMessage: string;
+  products: Observable<Product[]>;
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService,private productService:AdminService) { }
 
   ngOnInit() {
     this.userService.getAdminBoard().subscribe(
@@ -21,5 +25,21 @@ export class AdminComponent implements OnInit {
         this.errorMessage = `${error.status}: ${JSON.parse(error.error).message}`;
       }
     );
+    this.reloadData();
+  }
+
+  
+  deleteProducts() {
+    this.productService.deleteAll()
+      .subscribe(
+        data => {
+          console.log(data);
+          this.reloadData();
+        },
+        error => console.log('ERROR: ' + error));
+  }
+
+  reloadData() {
+    this.products = this.productService.getProductsList();
   }
 }

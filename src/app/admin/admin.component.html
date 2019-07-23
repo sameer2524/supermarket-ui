@@ -1,3 +1,12 @@
-<h4>Content from Server</h4>
 {{board}}
 {{errorMessage}}
+
+<h1>Products</h1>
+<a routerLink="/add" class="btn btn-primary active" role="button" routerLinkActive="active">Add</a>
+<div *ngFor="let product of products | async" style="width: 300px;">
+  <app-product-details [product]='product'></app-product-details>
+</div>
+
+<div>
+  <button type="button" class="button btn-danger" (click)='deleteProducts()'>Delete All</button>
+</div>

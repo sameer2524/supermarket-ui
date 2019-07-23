@@ -10,6 +10,9 @@ import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
 import { AdminComponent } from './admin/admin.component';
 import { LoginComponent } from './login/login.component';
+import { CreateProductComponent } from './admin/create-product/create-product.component';
+import { ProductDetailsComponent } from './admin/product-details/product-details.component';
+import { httpInterceptorProviders } from './auth/auth-interceptor';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,9 @@ import { LoginComponent } from './login/login.component';
     RegisterComponent,
     HomeComponent,
     AdminComponent,
-    LoginComponent
+    LoginComponent,
+    CreateProductComponent,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +31,7 @@ import { LoginComponent } from './login/login.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [httpInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
