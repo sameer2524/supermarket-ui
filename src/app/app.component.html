@@ -26,8 +26,12 @@
           <li><a href="#">Contact</a></li>
         </ul>
         <ul>
+            <li *ngIf="authority" class="nav-item">
+                <div class="col-md-4"><button class="btn btn-secondary" (click)="logout()" style="background: rgb(34, 33, 33);
+                color: gray;">Logout</button></div>
+            </li>
             <li *ngIf="!authority" class="nav-item">
-                <div class="col-md-4"><a class="nav-link"routerLink="auth/login"><span class="glyphicon glyphicon-log-in"></span>Login</a></div>
+                <div class="col-md-4"><a class="nav-link"routerLink="auth/login"><span class="glyphicon glyphicon-log-in">&nbsp;Login</span></a></div>
             </li>
         </ul>
       </div>

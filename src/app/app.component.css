@@ -1,4 +1,41 @@
+@import  url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+  body {
+      background:#EBEDEF  ;
+      font-family: 'Open Sans', sans-serif;
+  }
+
 .container{
+    text-align: center;
+}
+.nav-link{
+    float:right;
+    size: 25px;
+    }
+
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+    }
+.nav-link{
+    color: gray;
+}
+
+.col-md-4{
+    float:right;
+    padding:13px;
+}
+
+footer {
+    background-color: #f2f2f2;
+    padding: 25px;
+  }
+/* .btn btn-secondary{
+    background: black;
+    color: gray;
+} */
+
+
+/* .container{
     text-align: center;
 }
 .nav-link{
@@ -16,5 +53,5 @@
 footer {
     background-color: #f2f2f2;
     padding: 25px;
-  }
+  } */
 

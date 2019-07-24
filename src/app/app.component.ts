@@ -9,6 +9,7 @@ import { TokenStorageService } from './auth/token-storage.service';
 export class AppComponent {
   private roles: string[];
   private authority: string;
+  info: any;
 
   constructor(private tokenStorage: TokenStorageService) { }
 
@@ -24,5 +25,9 @@ export class AppComponent {
         return true;
       });
     }
+  }
+  logout(){
+    this.tokenStorage.signOut();
+    window.location.reload();
   }
 }
