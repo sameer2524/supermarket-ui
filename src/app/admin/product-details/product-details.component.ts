@@ -10,7 +10,9 @@ import { AdminComponent } from '../admin.component';
 })
 export class ProductDetailsComponent implements OnInit {
 
-  @Input() product: Product;
+  @Input()
+  product: Product;
+  selectedProduct:Product;
 
   constructor(private customerService: AdminService, private listComponent: AdminComponent) { }
 
@@ -36,5 +38,10 @@ export class ProductDetailsComponent implements OnInit {
           this.listComponent.reloadData();
         },
         error => console.log(error));
+  }
+
+  onSelection(product:Product){
+    console.log("It Works!!");
+    this.selectedProduct=product;
   }
 }

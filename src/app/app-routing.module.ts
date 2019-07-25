@@ -6,6 +6,8 @@ import { AdminComponent } from './admin/admin.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { CreateProductComponent } from './admin/create-product/create-product.component';
+import { UpdateproductComponent } from './admin/updateproduct/updateproduct.component';
+import { ProductDetailsComponent } from './admin/product-details/product-details.component';
 
 
 const routes: Routes = [
@@ -38,6 +40,13 @@ const routes: Routes = [
     path: 'add',
  component: CreateProductComponent
 },
+{
+    path:'update/:id',
+    component:UpdateproductComponent
+},{
+    path:'product',
+    component:ProductDetailsComponent
+}
 ];
 
 @NgModule({

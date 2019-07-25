@@ -13,6 +13,7 @@ import { LoginComponent } from './login/login.component';
 import { CreateProductComponent } from './admin/create-product/create-product.component';
 import { ProductDetailsComponent } from './admin/product-details/product-details.component';
 import { httpInterceptorProviders } from './auth/auth-interceptor';
+import { UpdateproductComponent } from './admin/updateproduct/updateproduct.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { httpInterceptorProviders } from './auth/auth-interceptor';
     AdminComponent,
     LoginComponent,
     CreateProductComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    UpdateproductComponent
   ],
   imports: [
     BrowserModule,

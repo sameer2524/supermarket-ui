@@ -1,7 +1,17 @@
 .makeItCenter{
-    width: 30%;
+    width: 50%;
     height:150vh;
     display:table-cell;
     align-items: center;
     justify-content: center;
+}
+.form-control{
+    width: 150%;
+}
+label{
+    font-size: 13px;
+    text-align: center;
+}
+.btn btn-primary{
+    width: 200%;
 }

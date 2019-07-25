@@ -20,7 +20,15 @@
     <span class="button is-small btn-primary" *ngIf='!product.active' (click)='updateActive(true)'>Active</span>
   
     <span class="button is-small btn-danger" (click)='deleteProduct()'>Delete</span>
+
+    <span class="button is-small btn-success" (click)="onSelection(product)">Update</span>
   
     <hr/>
+  </div>
+
+  
+
+  <div *ngIf="selectedProduct" class="selectedProduct">
+    <app-updateproduct [product]="selectedProduct"></app-updateproduct>
   </div>
 

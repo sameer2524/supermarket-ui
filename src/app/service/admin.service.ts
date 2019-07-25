@@ -12,7 +12,7 @@ export class AdminService {
   constructor(private http: HttpClient) { }
 
   getProduct(id: number): Observable<Object> {
-    return this.http.get(`${this.baseUrl}/${id}`, { withCredentials: true });
+    return this.http.get(`${this.baseUrl}/product/${id}`, { withCredentials: true });
   }
 
   createProduct(product: Object): Observable<Object> {
