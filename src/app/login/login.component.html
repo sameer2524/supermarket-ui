@@ -23,15 +23,17 @@
           </div>
         </div>
         <div class="form-group">
-          <button class="btn btn-primary">Login</button>
+          <button class="btn btn-primary">Login</button><br/><br/>
+          <p>Don't have an account?</p>
+          <a href="signup" class="btn btn-success ">Sign Up</a>
           <div *ngIf="f.submitted && isLoginFailed" class="alert alert-danger">
             Login failed: {{errorMessage}}
           </div>
         </div>
       </form>
       <hr />
-      <p>Don't have an account?</p>
-      <a href="signup" class="btn btn-success">Sign Up</a>
+      
+      
     </div>
   </ng-template>
 </div>
