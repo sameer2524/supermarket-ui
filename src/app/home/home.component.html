@@ -231,12 +231,12 @@ figure.testimonial .peopl h3 {
 </head>
 
 <div *ngIf="info.token; else loggedOut">
-    <h5 class="text-primary">Your Information</h5>
-    <p>
+    <!-- <h5 class="text-primary">Your Information</h5>
+    <p>-->
       <strong>Username:</strong> {{info.username}}<br/>
       <!-- <strong>Roles:</strong> {{info.authorities}}<br />
       <strong>Token:</strong> {{info.token}}. -->
-    </p>
+    <!-- </p> -->
     <!-- <button class="btn btn-secondary" (click)="logout()">Logout</button> -->
   </div>
   
@@ -308,28 +308,28 @@ figure.testimonial .peopl h3 {
         <div class="col-sm-4">
           <div class="panel panel-primary">
             <div class="panel-heading"><h4>Fruits</h4></div>
-            <div class="panel-body"><img src="./assets/images/sp3.jpeg" class="img-responsive" style="width:100%" style="height: 100%" alt="Image"></div>
-            <div class="panel-footer"><h4>RS.50 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="panel-body"><img src="./assets/images/sp3.jpeg" class="img-responsive" style="width:100%" style="height: 100%" alt="Image" routerLink="/user"></div>
+            <div class="panel-footer"><h4> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              Quantity:10 </h4></div>  
+               </h4></div>  
   
           </div>
         </div>
         <div class="col-sm-4">
             <div class="panel panel-primary">
               <div class="panel-heading"><h4>Vegetables</h4></div>
-              <div class="panel-body"><img src="./assets/images/sp11.jpg" class="img-responsive" style="width:20%" style="height: 100%" alt="Image"></div>
-              <div class="panel-footer"><h4>RS.70 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <div class="panel-body"><img src="./assets/images/sp11.jpg" class="img-responsive" style="width:20%" style="height: 100%" alt="Image" routerLink="/user"></div>
+              <div class="panel-footer"><h4> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                Quantity:15 </h4></div>  
+                </h4></div>  
         </div></div>
         <div class="col-sm-4">
             <div class="panel panel-primary">
               <div class="panel-heading"><h4>Groceries</h4></div>
-              <div class="panel-body"><img src="./assets/images/Grocery-Header-622x400.jpg" class="img-responsive" style="width:100%" style="height:110%" alt="Image"></div>
-              <div class="panel-footer"><h4>RS.50 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <div class="panel-body"><img src="./assets/images/Grocery-Header-622x400.jpg" class="img-responsive" style="width:100%" style="height:110%" alt="Image" routerLink="/user"></div>
+              <div class="panel-footer"><h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                Quantity:23 </h4></div>  
+                 </h4></div>  
           </div>
         </div>
       </div>
@@ -340,28 +340,28 @@ figure.testimonial .peopl h3 {
           <div class="col-sm-4">
             <div class="panel panel-primary">
               <div class="panel-heading"><h4>Apple</h4></div>
-              <div class="panel-body"><img src="./assets/images/1.jpg" class="img-responsive" style="width:100%" style="height: 110%" alt="Image"></div>
-              <div class="panel-footer"><h4>RS.50 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <div class="panel-body"><img src="./assets/images/1.jpg" class="img-responsive" style="width:100%" style="height: 110%" alt="Image" routerLink="/user"></div>
+              <div class="panel-footer"><h4> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                Quantity:10 </h4></div>  
+                 </h4></div>  
     
             </div>
           </div>
           <div class="col-sm-4">
               <div class="panel panel-primary">
                 <div class="panel-heading"><h4>Pear</h4></div>
-                <div class="panel-body"><img src="./assets/images/2.jfif" class="img-responsive" style="width:75%" style="height: 100%" alt="Image"></div>
-                <div class="panel-footer"><h4>RS.70 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <div class="panel-body"><img src="./assets/images/2.jfif" class="img-responsive" style="width:75%" style="height: 100%" alt="Image" routerLink="/user"></div>
+                <div class="panel-footer"><h4> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  Quantity:15 </h4></div>  
+                   </h4></div>  
           </div></div>
           <div class="col-sm-4">
               <div class="panel panel-primary">
                 <div class="panel-heading"><h4>Accessories</h4></div>
-                <div class="panel-body"><img src="./assets/images/mens-access.png" class="img-responsive" style="width:100%" style="height: 100%" alt="Image"></div>
-                <div class="panel-footer"><h4>RS.50 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <div class="panel-body"><img src="./assets/images/mens-access.png" class="img-responsive" style="width:100%" style="height: 100%" alt="Image" routerLink="/user"></div>
+                <div class="panel-footer"><h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  Quantity:23 </h4></div>  
+                   </h4></div>  
             </div>
           </div>
         </div>

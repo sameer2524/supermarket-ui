@@ -2,11 +2,21 @@
 {{errorMessage}} -->
 
 <h1>Products</h1>
-<a routerLink="/add" class="btn btn-primary active" role="button" routerLinkActive="active">Add</a>
-<div *ngFor="let product of products | async" style="width: 300px;">
+<a routerLink="/add" class="btn btn-primary active" role="button" routerLinkActive="active" style="font-size: 15px;width: 150px;">Add New Product</a>
+<div class="container">
+<div class="row">
+    <div class="col-md-4">Product Name</div>
+    <div class="col-md-2">Price</div>
+    <div class="col-md-2">Quantity</div>
+    <div class="col-md-1">Active</div>
+    <div class="col-md-1">Delete</div>
+    <div class="col-md-1">Update</div>
+  </div>
+    
+<div *ngFor="let product of products | async">
   <app-product-details [product]='product'></app-product-details>
+  </div>
 </div>
-
 <div>
-  <button type="button" class="button btn-danger" (click)='deleteProducts()'>Delete All</button>
+  <button type="button" class="button btn-danger" (click)='deleteProducts()'style="font-size: 15px;width: 150px;">Delete All</button>
 </div>

@@ -1,31 +1,16 @@
-<div *ngIf="product">
-    <div>
-      <label>Product Name: </label> {{product.productname}}
-    </div>
-    <div>
-      <label>Price: </label> {{product.price}}
-    </div>
-    <div>
-        <label>Description: </label> {{product.description}}
+<div class="container">
+<div class="row" *ngIf="product">
+    <div class="col-md-4">{{product.productname}}</div>
+      <div class="col-md-2">{{product.price}}</div>
+      <div class="col-md-2">{{product.quantity}}</div>
+      <div class="col-md-1">
+        <span class="button is-small btn-primary" *ngIf='product.active' (click)='updateActive(false)'>Inactive</span>
+        <span class="button is-small btn-primary" *ngIf='!product.active' (click)='updateActive(true)'>Active</span>
       </div>
-      <div>
-        <label>Quantity: </label> {{product.quantity}}
-      </div>
-    <div>
-      <label>Active: </label> {{product.active}}
+      <div class="col-md-1"><span class="button is-small btn-danger" (click)='deleteProduct()'>Delete</span></div>
+      <div class="col-md-1"><span class="button is-small btn-success" (click)="onSelection(product)">Update</span></div>
     </div>
-  
-    <span class="button is-small btn-primary" *ngIf='product.active' (click)='updateActive(false)'>Inactive</span>
-  
-    <span class="button is-small btn-primary" *ngIf='!product.active' (click)='updateActive(true)'>Active</span>
-  
-    <span class="button is-small btn-danger" (click)='deleteProduct()'>Delete</span>
-
-    <span class="button is-small btn-success" (click)="onSelection(product)">Update</span>
-  
-    <hr/>
-  </div>
-
+</div>
   
 
   <div *ngIf="selectedProduct" class="selectedProduct">
