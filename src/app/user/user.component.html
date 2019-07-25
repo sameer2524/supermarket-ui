@@ -1,10 +1,28 @@
 <h4>Content from Server</h4>
-{{board}}
-{{errorMessage}}
+<!-- {{board}}
+{{errorMessage}} -->
 <h5 class="text-primary">Your Information</h5>
     <p>
       <strong>Username:</strong> {{info.username}}<br/>
-      <strong>Email:</strong> {{info.email}}<br/>
-      <strong>Roles:</strong> {{info.authorities}}<br />
-      <strong>Token:</strong> {{info.token}}<br/>
+      <!-- <strong>Roles:</strong> {{info.authorities}}<br /> -->
+      <!-- <strong>Token:</strong> {{info.token}}<br/> -->
     </p>
+
+
+    <div *ngFor="let product of products | async" style="width: 300px;">
+      <div>
+        <label>Product Name: </label> {{product.productname}}
+      </div>
+      <div>
+        <label>Price: </label> {{product.price}}
+      </div>
+      <!-- <div>
+          <label>Description: </label> {{product.description}}
+        </div> -->
+        <div>
+          <label>Quantity: </label> {{product.quantity}}
+        </div>
+
+    
+      <hr/>
+    </div>
