@@ -6,9 +6,9 @@ import { AdminComponent } from './admin/admin.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { CreateProductComponent } from './admin/create-product/create-product.component';
-import { UpdateproductComponent } from './admin/updateproduct/updateproduct.component';
 import { ProductDetailsComponent } from './admin/product-details/product-details.component';
 import { ContactComponent } from './contact/contact.component';
+import { RpoductDetailsComponent } from './user/rpoduct-details/rpoduct-details.component';
 
 
 const routes: Routes = [
@@ -47,6 +47,9 @@ const routes: Routes = [
 },{
     path:'contact',
     component:ContactComponent
+},{
+    path:'product/:id',
+    component:RpoductDetailsComponent
 }
 ];
 

@@ -15,5 +15,8 @@ export class ProductService {
     console.log("enter");
     return this.http.get(`${this.userUrl}`+'/products');
   }
+  getProduct(id: number): Observable<Object> {
+    return this.http.get(`${this.userUrl}/product/${id}`);
+  }
   
 }

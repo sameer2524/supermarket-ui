@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Product } from 'src/app/admin/Product';
+import { ActivatedRoute } from '@angular/router';
+import { ProductService } from 'src/app/service/product.service';
 
 @Component({
   selector: 'app-rpoduct-details',
@@ -7,9 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RpoductDetailsComponent implements OnInit {
 
-  constructor() { }
+  @Input()
+  product:Product;
+  constructor(private route:ActivatedRoute,private service:ProductService) { }
 
-  ngOnInit() {
+  ngOnInit(){
   }
+
 
 }

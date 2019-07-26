@@ -4,11 +4,11 @@
       <div class="col-md-2">{{product.price}}</div>
       <div class="col-md-2">{{product.quantity}}</div>
       <div class="col-md-1">
-        <span class="button is-small btn-primary" *ngIf='product.active' (click)='updateActive(false)'>Inactive</span>
-        <span class="button is-small btn-primary" *ngIf='!product.active' (click)='updateActive(true)'>Active</span>
+        <button class="btn info" *ngIf='product.active' (click)='updateActive(false)'>Inactive</button>
+        <button class="btn info" *ngIf='!product.active' (click)='updateActive(true)'>Active</button>
       </div>
-      <div class="col-md-1"><span class="button is-small btn-danger" (click)='deleteProduct()'>Delete</span></div>
-      <div class="col-md-1"><span class="button is-small btn-success" (click)='onSelection(product)' >Update</span></div>
+      <div class="col-md-1"><button class="btn danger" (click)='deleteProduct()'>Delete</button></div>
+      <div class="col-md-1"><button class="btn success" (click)='onSelection(product)' >Update</button></div>
     </div>
 </div>
   

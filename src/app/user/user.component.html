@@ -20,7 +20,7 @@
 
     <div class="row" *ngFor="let product of products | async">
       <div class="col-md-3"><img src="./assets/images/shopping-cart-basket-buy-online-logo-vector-14882860.jpg" style="width:50px"></div>
-      <div class="col-md-3">{{product.productname}}</div>
+      <div class="col-md-3"><a routerLink="/product/{{product.id}}">{{product.productname}}</a></div>
       <div class="col-md-2">{{product.price}}</div>
       <div class="col-md-1">{{product.quantity}}</div>
       <div class="col-md-3"><button class="btn btn-success ">add to cart</button></div>
