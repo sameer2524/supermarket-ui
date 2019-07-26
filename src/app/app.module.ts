@@ -14,8 +14,8 @@ import { CreateProductComponent } from './admin/create-product/create-product.co
 import { ProductDetailsComponent } from './admin/product-details/product-details.component';
 import { httpInterceptorProviders } from './auth/auth-interceptor';
 import { UpdateproductComponent } from './admin/updateproduct/updateproduct.component';
-import { AdminService } from './service/admin.service';
 import { ContactComponent } from './contact/contact.component';
+import { RpoductDetailsComponent } from './user/rpoduct-details/rpoduct-details.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +28,8 @@ import { ContactComponent } from './contact/contact.component';
     CreateProductComponent,
     ProductDetailsComponent,
     UpdateproductComponent,
-    ContactComponent
+    ContactComponent,
+    RpoductDetailsComponent
   ],
   imports: [
     BrowserModule,
