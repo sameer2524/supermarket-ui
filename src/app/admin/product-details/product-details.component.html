@@ -8,7 +8,7 @@
         <span class="button is-small btn-primary" *ngIf='!product.active' (click)='updateActive(true)'>Active</span>
       </div>
       <div class="col-md-1"><span class="button is-small btn-danger" (click)='deleteProduct()'>Delete</span></div>
-      <div class="col-md-1"><span class="button is-small btn-success" (click)="onSelection(product)">Update</span></div>
+      <div class="col-md-1"><span class="button is-small btn-success" (click)='onSelection(product)' >Update</span></div>
     </div>
 </div>
   

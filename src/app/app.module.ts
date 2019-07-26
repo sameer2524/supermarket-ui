@@ -14,6 +14,8 @@ import { CreateProductComponent } from './admin/create-product/create-product.co
 import { ProductDetailsComponent } from './admin/product-details/product-details.component';
 import { httpInterceptorProviders } from './auth/auth-interceptor';
 import { UpdateproductComponent } from './admin/updateproduct/updateproduct.component';
+import { AdminService } from './service/admin.service';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { UpdateproductComponent } from './admin/updateproduct/updateproduct.comp
     LoginComponent,
     CreateProductComponent,
     ProductDetailsComponent,
-    UpdateproductComponent
+    UpdateproductComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

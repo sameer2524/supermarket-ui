@@ -8,6 +8,7 @@ import { RegisterComponent } from './register/register.component';
 import { CreateProductComponent } from './admin/create-product/create-product.component';
 import { UpdateproductComponent } from './admin/updateproduct/updateproduct.component';
 import { ProductDetailsComponent } from './admin/product-details/product-details.component';
+import { ContactComponent } from './contact/contact.component';
 
 
 const routes: Routes = [
@@ -41,11 +42,11 @@ const routes: Routes = [
  component: CreateProductComponent
 },
 {
-    path:'update/:id',
-    component:UpdateproductComponent
-},{
     path:'product',
     component:ProductDetailsComponent
+},{
+    path:'contact',
+    component:ContactComponent
 }
 ];
 
