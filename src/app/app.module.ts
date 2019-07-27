@@ -33,7 +33,7 @@ import { CartDeleteComponent } from './cart/cart-delete/cart-delete.component';
     ContactComponent,
     RpoductDetailsComponent,
     CartComponent,
-    CartDeleteComponent
+    CartDeleteComponent,
   ],
   imports: [
     BrowserModule,

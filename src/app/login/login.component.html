@@ -1,6 +1,7 @@
 <div class="makeItCenter">
 <div *ngIf="isLoggedIn; else loggedOut">
-    Logged in as {{roles}}.
+    Welcome<br/>
+    <strong>{{info.username}}</strong>
   </div>
   <ng-template #loggedOut>
     <div class="row col-sm-6" style="max-width:350px;">

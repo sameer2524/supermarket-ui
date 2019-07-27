@@ -24,6 +24,7 @@ export class UserComponent implements OnInit {
     this.userService.getUserBoard().subscribe(
       data => {
         this.board = data;
+        this.reloadData();
       },
       error => {
         this.errorMessage = `${error.status}: ${JSON.parse(error.error).message}`;
@@ -34,9 +35,7 @@ export class UserComponent implements OnInit {
       username: this.token.getUsername(),
       authorities: this.token.getAuthorities()
     };
-    this.reloadData();
   }
-
   addToCart(product) {
     window.alert('Your product has been added to the cart!');
     this.cartService.addToCart(product);
@@ -47,4 +46,5 @@ export class UserComponent implements OnInit {
     console.log("user");
     this.products = this.productService.getProductsList();
   }
+ 
 }

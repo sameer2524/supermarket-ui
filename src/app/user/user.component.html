@@ -2,28 +2,28 @@
 <!-- <h4>Content from Server</h4> -->
 <!-- {{board}}
 {{errorMessage}} -->
-<!-- <h5 class="text-primary">Your Information</h5> -->
-    <!-- <p>
-      <strong>Username:</strong> {{info.username}}<br/> -->
-      <!-- <strong>Roles:</strong> {{info.authorities}}<br /> -->
-      <!-- <strong>Token:</strong> {{info.token}}<br/> -->
-    <!-- </p> -->
-<div class="container">
-  <div class="row">
-    <div class="col-md-3">Image</div>
-    <div class="col-md-3">Product Name</div>
-    <div class="col-md-2">Price</div>
-    <div class="col-md-1">Quantity</div>
-    <div class="col-md-3">Cart</div>
-  </div>
-
-
-    <div class="row" *ngFor="let product of products | async">
-      <div class="col-md-3"><img src="./assets/images/shopping-cart-basket-buy-online-logo-vector-14882860.jpg" style="width:50px"></div>
-      <div class="col-md-3"><a routerLink="/product/{{product.id}}">{{product.productname}}</a></div>
-      <div class="col-md-2">{{product.price}}</div>
-      <div class="col-md-1">{{product.quantity}}</div>
-      <div class="col-md-3"><button class="btn btn-success " (click)="addToCart(product)">Add to Cart</button></div>
-    </div>
-  </div>
-      <br/>
+<h5 class="text-primary">Your Information</h5>
+    <p>
+      <strong>Username:</strong> {{info.username}}<br/>
+      <!-- <strong>Roles:</strong> {{info.authorities}}<br />
+      <strong>Token:</strong> {{info.token}}<br/> -->
+    </p>
+    <div class="container">
+        <div class="row">
+          <div class="col-md-3">Image</div>
+          <div class="col-md-3">Product Name</div>
+          <div class="col-md-2">Price</div>
+          <div class="col-md-1">Quantity</div>
+          <div class="col-md-3">Cart</div>
+        </div>
+      
+      
+          <div class="row" *ngFor="let product of products | async">
+            <div class="col-md-3"><img src="./assets/images/shopping-cart-basket-buy-online-logo-vector-14882860.jpg" style="width:50px"></div>
+            <div class="col-md-3"><a routerLink="/product/{{product.id}}">{{product.productname}}</a></div>
+            <div class="col-md-2">{{product.price| currency:'INR':'symbol':'1.2-2'}}</div>
+            <div class="col-md-1">{{product.quantity}}</div>
+            <div class="col-md-3"><button class="btn btn-success " (click)="addToCart(product)">Add to Cart</button></div>
+          </div>
+        </div>
+            <br/>

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from '../admin/Product';
 import { CartService } from '../service/cart.service';
-import { Observable } from 'rxjs';
+import { TokenStorageService } from '../auth/token-storage.service';
 
 @Component({
   selector: 'app-cart',
@@ -10,10 +10,28 @@ import { Observable } from 'rxjs';
 })
 export class CartComponent implements OnInit {
   products:Product[];
-  board:string="enter";
-  constructor(private cartService:CartService) { }
+  info:any;
+  private roles: string[];
+  private authority: string;
+  constructor(private cartService:CartService,private token: TokenStorageService) { }
 
   ngOnInit() {
+    if (this.token.getToken()) {
+      this.roles = this.token.getAuthorities();
+      this.roles.every(role => {
+        if (role === 'ROLE_ADMIN') {
+          this.authority = 'admin';
+          return false;
+        }
+        this.authority = 'user';
+        return true;
+      });
+    }
+    this.info = {
+      token: this.token.getToken(),
+      username: this.token.getUsername(),
+      authorities: this.token.getAuthorities()
+    };
     this.cartService.getCartProducts().subscribe(orderProducts=>this.products=orderProducts);
   }
   buy() {
