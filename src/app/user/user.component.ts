@@ -4,6 +4,7 @@ import { TokenStorageService } from '../auth/token-storage.service';
 import { Observable } from 'rxjs';
 import { Product } from '../admin/Product';
 import { ProductService } from '../service/product.service';
+import { CartService } from '../service/cart.service';
 
 @Component({
   selector: 'app-user',
@@ -15,8 +16,9 @@ export class UserComponent implements OnInit {
   errorMessage: string;
   info: any;
   products: Observable<Product[]>;
+  product:Product;
 
-  constructor(private userService: UserService,private token: TokenStorageService,private productService:ProductService) { }
+  constructor(private userService: UserService,private token: TokenStorageService,private productService:ProductService,private cartService:CartService) { }
 
   ngOnInit() {
     this.userService.getUserBoard().subscribe(
@@ -33,6 +35,12 @@ export class UserComponent implements OnInit {
       authorities: this.token.getAuthorities()
     };
     this.reloadData();
+  }
+
+  addToCart(product) {
+    window.alert('Your product has been added to the cart!');
+    this.cartService.addToCart(product);
+    console.log("DONE");
   }
 
   reloadData() {

@@ -10,7 +10,7 @@ export class AppComponent {
   private roles: string[];
   private authority: string;
   info: any;
-
+  pageTitle = 'Super Market';
   constructor(private tokenStorage: TokenStorageService) { }
 
   ngOnInit() {

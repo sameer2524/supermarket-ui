@@ -22,6 +22,18 @@
           <li><a routerLink="/user" class="nav-link">Products</a></li>
           <li><a routerLink="/contact" class="nav-link">Contact</a></li>
         </ul>
+        <ul  class="nav navbar-nav" style="float: center;">
+            <li><a class="nav-link" routerLink="home"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{pageTitle}}</strong>
+            </a></li>
+        </ul>
+        <ul class="nav navbar-nav" style="float: right;">
+            <li><a routerLink="/cart" class="button fancy-button" class="checkout"><i class="material-icons">shopping_cart</i></a></li>
+        </ul>
         <ul>
             <li *ngIf="authority" class="nav-item">
                 <div class="col-md-4"><button class="btn btn-secondary"  class="nav-link" (click)="logout()" style="background: rgb(34, 33, 33);

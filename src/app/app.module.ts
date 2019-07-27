@@ -16,6 +16,8 @@ import { httpInterceptorProviders } from './auth/auth-interceptor';
 import { UpdateproductComponent } from './admin/updateproduct/updateproduct.component';
 import { ContactComponent } from './contact/contact.component';
 import { RpoductDetailsComponent } from './user/rpoduct-details/rpoduct-details.component';
+import { CartComponent } from './cart/cart.component';
+import { CartDeleteComponent } from './cart/cart-delete/cart-delete.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { RpoductDetailsComponent } from './user/rpoduct-details/rpoduct-details.
     ProductDetailsComponent,
     UpdateproductComponent,
     ContactComponent,
-    RpoductDetailsComponent
+    RpoductDetailsComponent,
+    CartComponent,
+    CartDeleteComponent
   ],
   imports: [
     BrowserModule,

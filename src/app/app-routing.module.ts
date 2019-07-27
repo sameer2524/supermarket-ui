@@ -9,6 +9,8 @@ import { CreateProductComponent } from './admin/create-product/create-product.co
 import { ProductDetailsComponent } from './admin/product-details/product-details.component';
 import { ContactComponent } from './contact/contact.component';
 import { RpoductDetailsComponent } from './user/rpoduct-details/rpoduct-details.component';
+import { CartComponent } from './cart/cart.component';
+import { CartDeleteComponent } from './cart/cart-delete/cart-delete.component';
 
 
 const routes: Routes = [
@@ -50,6 +52,12 @@ const routes: Routes = [
 },{
     path:'product/:id',
     component:RpoductDetailsComponent
+},{
+    path:'cart',
+    component:CartComponent
+},{
+    path:'cart/delete',
+    component:CartDeleteComponent
 }
 ];
 
