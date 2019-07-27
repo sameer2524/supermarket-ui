@@ -20,4 +20,9 @@ export class CartService {
   deleteFromCart(id){
     this.products.pop();
   }
+  
+  clearCart() {
+    this.products = [];
+    return this.products;
+  }
 }
