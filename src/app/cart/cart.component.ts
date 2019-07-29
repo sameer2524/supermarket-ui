@@ -37,4 +37,7 @@ export class CartComponent implements OnInit {
   buy() {
     alert("Your order will be delivered to you within 30 minutes!                           Have a Great Day");
   }
+  clear(){
+    this.cartService.clearCart();
+  }
 }

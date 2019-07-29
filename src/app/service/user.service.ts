@@ -8,6 +8,7 @@ import { HttpClient } from '@angular/common/http';
 export class UserService {
 
   private userUrl = 'http://localhost:8080/api/test/user';
+  
   private adminUrl = 'http://localhost:8080/api/test/admin';
 
   constructor(private http: HttpClient) { }
@@ -19,4 +20,5 @@ export class UserService {
   getAdminBoard(): Observable<string> {
     return this.http.get(this.adminUrl, { responseType: 'text' });
   }
+ 
 }

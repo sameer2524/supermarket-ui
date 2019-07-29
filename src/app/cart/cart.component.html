@@ -6,12 +6,15 @@
         <div class="col-md-3"><button class="btn btn-primary" routerLink="/cart/delete">Delete</button></div>
     </div> 
     <div class="row">
+        <ul>
             <li *ngIf="!authority" class="nav-item">
-                    <div class="col-md-4">Please Login</div>
-                </li>
-            <li *ngIf="authority" class="nav-item">
-                 <div class="col-md-6"><button class="btn btn-primary" (click)="buy()">Buy</button></div> 
+                <div class="col-md-4">Please Login</div>
             </li>
+            <li *ngIf="authority" class="nav-item">
+                <div class="col-md-6"><button class="btn btn-primary" (click)="buy()">Buy</button></div> 
+            </li>
+        </ul>
+        <!-- <div class="col-md-6"><button class="btn btn-primary" (click)="clear()">Clear Cart</button></div>    -->
     </div> 
 </div>
 

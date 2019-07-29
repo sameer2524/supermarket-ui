@@ -11,6 +11,7 @@ import { ContactComponent } from './contact/contact.component';
 import { RpoductDetailsComponent } from './user/rpoduct-details/rpoduct-details.component';
 import { CartComponent } from './cart/cart.component';
 import { CartDeleteComponent } from './cart/cart-delete/cart-delete.component';
+import { GuestComponent } from './user/guest/guest.component';
 
 
 const routes: Routes = [
@@ -58,6 +59,9 @@ const routes: Routes = [
 },{
     path:'cart/delete',
     component:CartDeleteComponent
+},{
+    path:'guest',
+    component:GuestComponent
 }
 ];
 

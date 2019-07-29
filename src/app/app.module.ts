@@ -18,6 +18,7 @@ import { ContactComponent } from './contact/contact.component';
 import { RpoductDetailsComponent } from './user/rpoduct-details/rpoduct-details.component';
 import { CartComponent } from './cart/cart.component';
 import { CartDeleteComponent } from './cart/cart-delete/cart-delete.component';
+import { GuestComponent } from './user/guest/guest.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { CartDeleteComponent } from './cart/cart-delete/cart-delete.component';
     RpoductDetailsComponent,
     CartComponent,
     CartDeleteComponent,
+    GuestComponent,
   ],
   imports: [
     BrowserModule,
