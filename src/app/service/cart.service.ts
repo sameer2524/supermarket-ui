@@ -7,15 +7,17 @@ import { Observable, of } from 'rxjs';
 })
 export class CartService {
   products:Product[]=[];
+  
   constructor() { }
   public addToCart(product){
     this.products.push(product);
   }
   
   getCartProducts():Observable<Product[]> {
-    return of (this.products);
     
+    return of (this.products);
   }
+  
 
   deleteFromCart(id){
     this.products.pop();

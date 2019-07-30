@@ -34,4 +34,7 @@ export class AdminService {
   deleteAll(): Observable<any> {
     return this.http.delete(`${this.baseUrl}` + `/delete`, { responseType: 'text' });
   }
+  getProductsByProductname(productname: string): Observable<any> {
+    return this.http.get(`${this.baseUrl}/products/name/${productname}`);
+  }
 }

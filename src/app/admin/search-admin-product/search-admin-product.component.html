@@ -1,0 +1,23 @@
+<p>search-admin-product works!</p>
+<h3>Find By Name</h3>
+<div style="width: 300px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="lastname">Product Name</label>
+      <input type="text" class="form-control" id="productname" required [(ngModel)]="productname" name="productname">
+    </div>
+
+    <div class="btn-group">
+      <button type="submit" class="btn btn-success">Submit</button>
+    </div>
+  </form>
+</div>
+<div *ngFor="let product of products">
+    <h4>{{product.id}} - {{product.productname}}</h4>
+</div>
+<!-- <ul>
+  <li >
+    
+  </li>
+</ul> -->
+

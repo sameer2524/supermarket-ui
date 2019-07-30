@@ -12,6 +12,8 @@ import { RpoductDetailsComponent } from './user/rpoduct-details/rpoduct-details.
 import { CartComponent } from './cart/cart.component';
 import { CartDeleteComponent } from './cart/cart-delete/cart-delete.component';
 import { GuestComponent } from './user/guest/guest.component';
+import { SearchProductComponent } from './user/search-product/search-product.component';
+import { SearchAdminProductComponent } from './admin/search-admin-product/search-admin-product.component';
 
 
 const routes: Routes = [
@@ -62,6 +64,12 @@ const routes: Routes = [
 },{
     path:'guest',
     component:GuestComponent
+},{
+    path:'findbyproductname',
+    component:SearchProductComponent
+},{
+    path:'adfindbyproductname',
+    component:SearchAdminProductComponent
 }
 ];
 

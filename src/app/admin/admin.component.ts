@@ -40,7 +40,7 @@ export class AdminComponent implements OnInit {
   }
 
   reloadData() {
-    console.log("called");
+    // console.log("called");
     this.products = this.productService.getProductsList();
   }
 }

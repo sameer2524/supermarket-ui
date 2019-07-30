@@ -11,6 +11,11 @@ import { TokenStorageService } from '../auth/token-storage.service';
 export class CartComponent implements OnInit {
   products:Product[];
   info:any;
+  //quantity:number;
+  // total:any;
+  product:Product;
+  quantity:number;
+  total:number=0;
   private roles: string[];
   private authority: string;
   constructor(private cartService:CartService,private token: TokenStorageService) { }
@@ -33,11 +38,21 @@ export class CartComponent implements OnInit {
       authorities: this.token.getAuthorities()
     };
     this.cartService.getCartProducts().subscribe(orderProducts=>this.products=orderProducts);
+    // for(this.quantity=1;this.quantity<=this.products.length;this.quantity++){
+    //   this.total+=this.quantity*this.products.product
+    // }
+    this.quantity=this.products.length;
   }
+
+  
+  
   buy() {
     alert("Your order will be delivered to you within 30 minutes!                           Have a Great Day");
   }
   clear(){
     this.cartService.clearCart();
   }
+  // calctotal(){
+  //   return this.total+=this.product.price*1;
+  // }
 }
