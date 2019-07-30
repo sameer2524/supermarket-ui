@@ -1,4 +1,3 @@
-<p>search-product works!</p>
 <h3>Find By Name</h3>
 <div style="width: 300px;">
   <form (ngSubmit)="onSubmit()">
@@ -12,10 +11,16 @@
     </div>
   </form>
 </div>
-<ul>
-  <li *ngFor="let product of products">
-    <h4>{{product.id}} - {{product.productname}}</h4>
-  </li>
-</ul>
+<div>
+  <div class="row" *ngFor="let product of products">
+      <div class="col-md-3"><img src="./assets/images/shopping-cart-basket-buy-online-logo-vector-14882860.jpg" style="width:50px"></div>
+      <div class="col-md-3"><a routerLink="/product/{{product.id}}">{{product.productname}}</a></div>
+      <div class="col-md-2">{{product.price| currency:'INR':'symbol':'1.2-2'}}</div>
+      <div class="col-md-1">
+          <button class="btn btn-success" *ngIf='product.active' value="Add to Cart" disabled>Add to Cart</button>
+          <button class="btn btn-success" *ngIf='!product.active' (click)="addToCart(product)">Add to Cart</button>
+        </div>
+  </div>
+</div>
 
 

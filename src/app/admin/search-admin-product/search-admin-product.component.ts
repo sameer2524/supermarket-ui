@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Product } from '../Product';
 import { AdminService } from 'src/app/service/admin.service';
 
@@ -8,8 +8,10 @@ import { AdminService } from 'src/app/service/admin.service';
   styleUrls: ['./search-admin-product.component.css']
 })
 export class SearchAdminProductComponent implements OnInit {
+  product: Product;
   productname: string;
   products: Product[];
+  selectedProduct:Product;
 
   constructor(private dataService: AdminService) { }
 
